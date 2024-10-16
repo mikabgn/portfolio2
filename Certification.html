@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Certifications - Portfolio</title>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/js-certification.js"></script>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style-certification.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="Accueil.html">Mon Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Accueil.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Cv.html">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ParcoursProfessionnel.html">Parcours professionnel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projets.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Certification.html">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="passions.html">Passions</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container py-5">
+    <h1 class="text-center mb-5 mt-5" data-aos="fade-down">Mes Certifications</h1>
+
+    <div class="row">
+        <!-- CNIL Certifications -->
+        <div class="col-md-4 certification-item" data-aos="fade-up">
+            <img src="Attestation.png/Certificat_Module1_Cnil-1.png" class="certification-image" alt="Certification CNIL 1" onclick="openModal(this.src)">
+            <h5 class="certification-title">Certification CNIL 1</h5>
+            <p>Description de la certification CNIL 1</p>
+            <a href="Attestation.pdf/Certificat_Module1_Cnil-1.pdf" class="btn btn-download" download>Télécharger PDF</a>
+        </div>
+        <div class="col-md-4 certification-item" data-aos="fade-up">
+            <img src="Attestation.png/Certificat_Module2_Cnil-1.png" class="certification-image" alt="Certification CNIL 2" onclick="openModal(this.src)">
+            <h5 class="certification-title">Certification CNIL 2</h5>
+            <p>Description de la certification CNIL 2</p>
+            <a href="Attestation.pdf/Certificat_Module2_Cnil-1.pdf" class="btn btn-download" download>Télécharger PDF</a>
+        </div>
+        <div class="col-md-4 certification-item" data-aos="fade-up">
+            <img src="Attestation.png/Certificat_Module3_Cnil-1.png" class="certification-image" alt="Certification CNIL 3" onclick="openModal(this.src)">
+            <h5 class="certification-title">Certification CNIL 3</h5>
+            <p>Description de la certification CNIL 3</p>
+            <a href="Attestation.pdf/Certificat_Module3_Cnil-1.pdf" class="btn btn-download" download>Télécharger PDF</a>
+        </div>
+        <div class="col-md-4 certification-item" data-aos="fade-up">
+            <img src="Attestation.png/Certificat_Module4_Cnil-1.png" class="certification-image" alt="Certification CNIL 4" onclick="openModal(this.src)">
+            <h5 class="certification-title">Certification CNIL 4</h5>
+            <p>Description de la certification CNIL 4</p>
+            <a href="Attestation.pdf/Certificat_Module4_Cnil-1.pdf" class="btn btn-download" download>Télécharger PDF</a>
+        </div>
+        <div class="col-md-4 certification-item" data-aos="fade-up">
+            <img src="Attestation.png/Certificat_Module5_Cnil-1.png" class="certification-image" alt="Certification CNIL 5" onclick="openModal(this.src)">
+            <h5 class="certification-title">Certification CNIL 5</h5>
+            <p>Description de la certification CNIL 5</p>
+            <a href="Attestation.pdf/Certificat_Module5_Cnil-1.pdf" class="btn btn-download" download>Télécharger PDF</a>
+        </div><br>
+
+        <!-- ANSSI Certification -->
+        <div class="col-md-4 certification-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="Attestation.png/Certificat_Annsi-1.png" class="certification-image" alt="Certification ANSSI" onclick="openModal(this.src)">
+            <h5 class="certification-title">Certification ANSSI</h5>
+            <p>Description de la certification ANSSI</p>
+            <a href="Attestation.pdf/Certificat_Annsi-1.pdf" class="btn btn-download" download>Télécharger PDF</a>
+        </div>
+
+        <!-- PIX Certification -->
+        <div class="col-md-4 certification-item" data-aos="fade-up" data-aos-delay="400">
+            <img src="Attestation.png/attestation-pix-20230224-1.png" class="certification-image" alt="Certification PIX" onclick="openModal(this.src)">
+            <h5 class="certification-title">Certification PIX</h5>
+            <p>Description de la certification PIX</p>
+            <a href="Attestasion.pdf/attestation-pix-20230224.pdf" class="btn btn-download" download>Télécharger PDF</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal pour afficher les images en grand -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img src="" class="modal-image" id="modalImage">
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-dark text-white text-center py-5 mt-5">
+    <p>&copy; 2024 Portfolio BTS SIO - Tous droits réservés</p>
+</footer>
+</body>
+</html>

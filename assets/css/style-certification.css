@@ -1,0 +1,48 @@
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+.certification-item {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+.certification-item:hover {
+    transform: translateY(-5px);
+}
+.certification-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.certification-image:hover {
+    opacity: 0.8;
+}
+.certification-title {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.btn-download {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-download:hover {
+    background-color: #0056b3;
+}
+.modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+}
+.certification-card {
+    height: 100%;
+}
+.certification-card img {
+    max-height: 150px;
+    object-fit: contain;
+}
