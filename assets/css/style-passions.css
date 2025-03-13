@@ -1,0 +1,63 @@
+.passion-card {
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.passion-card:hover {
+    transform: translateY(-10px);
+}
+
+.passion-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-title {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+    transition: width 0.3s ease;
+}
+
+.category-title:hover::after {
+    width: 125px;
+}
+
+.bg-gaming {
+    background: linear-gradient(45deg, #6f42c1, #007bff);
+}
+
+.bg-sport {
+    background: linear-gradient(45deg, #28a745, #20c997);
+}
+
+.bg-anime {
+    background: linear-gradient(45deg, #B50F4D, #E656B7);
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 200px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

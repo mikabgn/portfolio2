@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site en Construction</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #87CEEB;
+      height: 100vh;
+      font-family: 'VT323', monospace;
+    }
+
+    .minecraft-world {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .steve {
+      width: 64px;
+      height: 128px;
+      position: absolute;
+      left: -100px;
+      bottom: 80px;
+      animation: steveWalk 4s forwards;
+      z-index: 2;
+    }
+
+    .sign {
+      width: 150px;
+      height: 120px;
+      background-color: #8B4513;
+      position: absolute;
+      left: 50%;
+      bottom: 80px;
+      transform: translateX(-50%) scale(0);
+      animation: signPop 0.5s ease-out 3s forwards;
+      border: 4px solid #4A3319;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      z-index: 1;
+    }
+
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      background: repeating-linear-gradient(
+              45deg,
+              #5C4033,
+              #5C4033 10px,
+              #8B4513 10px,
+              #8B4513 20px
+      );
+      z-index: 1;
+    }
+
+    .clouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><path fill="white" d="M30 40 Q40 30 50 40 Q60 30 70 40 Q80 30 90 40 L90 50 L30 50 Z"/></svg>') repeat-x;
+      animation: cloudMove 20s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes steveWalk {
+      0% {
+        left: -100px;
+      }
+      70% {
+        left: calc(50% - 82px);
+      }
+      100% {
+        left: calc(50% - 32px);
+      }
+    }
+
+    @keyframes signPop {
+      0% {
+        transform: translateX(-50%) scale(0);
+      }
+      70% {
+        transform: translateX(-50%) scale(1.2);
+      }
+      100% {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+
+    @keyframes cloudMove {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .steve-sprite {
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="128"><rect x="16" y="0" width="32" height="32" fill="%23995C33"/><rect x="8" y="32" width="48" height="48" fill="%234A76B7"/><rect x="16" y="80" width="16" height="48" fill="%23995C33"/><rect x="32" y="80" width="16" height="48" fill="%23995C33"/></svg>');
+      animation: spriteAnimate 0.4s steps(2) infinite;
+    }
+
+    @keyframes spriteAnimate {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-128px);
+      }
+    }
+
+    .construction-text {
+      opacity: 0;
+      animation: textFade 0.5s ease-in 3.5s forwards;
+    }
+
+    @keyframes textFade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="minecraft-world">
+  <div class="clouds"></div>
+  <div class="steve">
+    <div class="steve-sprite"></div>
+  </div>
+  <div class="sign">
+    <div class="construction-text">
+      Page en<br>Construction
+    </div>
+  </div>
+  <div class="ground"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const steve = document.querySelector('.steve');
+
+    steve.addEventListener('animationend', function(e) {
+      if (e.animationName === 'steveWalk') {
+        steve.style.animation = 'none';
+        steve.querySelector('.steve-sprite').style.animation = 'none';
+      }
+    });
+  });
+</script>
+</body>
+</html>

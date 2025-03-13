@@ -46,3 +46,23 @@ body {
     max-height: 150px;
     object-fit: contain;
 }
+.certification-item .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.certification-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.certification-title {
+    margin-top: 10px;
+}
+
+.btn-download {
+    margin-top: 10px;
+}
